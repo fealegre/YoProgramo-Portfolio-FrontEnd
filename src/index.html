@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Portfolio</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" />
+  <link rel="stylesheet" href="assets/css/all.css" />  
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/templatemo-style.css" />
+  <script defer src="assets/js/all.js"></script>
+  <title>FERNANDO ALEGRE - WEB DEVELOPER PORTFOLIO</title>
+  
+</head>
+<body>
+  <app-root></app-root>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/parallax.min.js"></script>
+  <script>
+    function detectMsBrowser() {
+      using_ms_browser =
+        navigator.appName == "Microsoft Internet Explorer" ||
+        (navigator.appName == "Netscape" &&
+          navigator.appVersion.indexOf("Edge") > -1) ||
+        (navigator.appName == "Netscape" &&
+          navigator.appVersion.indexOf("Trident") > -1);
+
+      if (using_ms_browser == true) {
+        alert(
+          "Please use Chrome or Firefox for the best browsing experience!"
+        );
+      }
+    }
+    function setBrandMarginTop() {
+      var bottomContainerHeight = $(".tm-welcome-container").height();
+
+      $(".tm-brand-container-outer").css({
+        "margin-top": -bottomContainerHeight+ "px"
+      });
+    }
+
+    $(function () {
+      setBrandMarginTop();
+      detectMsBrowser();
+
+      // Handle window resize event      
+      $(window).resize(function () {
+        setBrandMarginTop();
+      });
+    });
+  </script>
+</body>
+</html>

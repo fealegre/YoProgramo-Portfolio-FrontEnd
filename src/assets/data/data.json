@@ -1,0 +1,91 @@
+{
+    "name":"Fernando Alegre",
+    "position":"Full Stack Developer Jr.",
+    "welcome_msg":"Bienvenidos a mi portfolio",
+    "mini_prof_bg":"assets/img/mini-profile-bg-01.jpg",
+    "education":[{
+        "logo":"assets/img/450_1000.jpg",
+        "school":"Sit nulla labore quis esse nulla excepteur anim sit mollit.",
+        "degree":"Qui tempor velit Lorem do minim velit ipsum eu ut eu labore. Deserunt aute deserunt ad pariatur ea adipisicing nisi eu duis irure incididunt laboris Lorem eu. Sit nulla ut pariatur ad duis Lorem proident sint elit sit consequat exercitation. Ad sit fugiat adipisicing eu irure excepteur irure Lorem proident culpa irure. Et dolor laboris magna officia proident quis. Non nostrud laboris aliquip elit."
+    },
+    {
+        "logo":"assets/img/450_1000.jpg",
+        "school":"Sit nulla labore quis esse nulla excepteur anim sit mollit.",
+        "degree":"Qui tempor velit Lorem do minim velit ipsum eu ut eu labore. Deserunt aute deserunt ad pariatur ea adipisicing nisi eu duis irure incididunt laboris Lorem eu. Sit nulla ut pariatur ad duis Lorem proident sint elit sit consequat exercitation. Ad sit fugiat adipisicing eu irure excepteur irure Lorem proident culpa irure. Et dolor laboris magna officia proident quis. Non nostrud laboris aliquip elit."
+    },
+    {
+        "logo":"assets/img/450_1000.jpg",
+        "school":"Sit nulla labore quis esse nulla excepteur anim sit mollit.",
+        "degree":"Qui tempor velit Lorem do minim velit ipsum eu ut eu labore. Deserunt aute deserunt ad pariatur ea adipisicing nisi eu duis irure incididunt laboris Lorem eu. Sit nulla ut pariatur ad duis Lorem proident sint elit sit consequat exercitation. Ad sit fugiat adipisicing eu irure excepteur irure Lorem proident culpa irure. Et dolor laboris magna officia proident quis. Non nostrud laboris aliquip elit."
+    },
+    {
+        "logo":"assets/img/450_1000.jpg",
+        "school":"Sit nulla labore quis esse nulla excepteur anim sit mollit.",
+        "degree":"Qui tempor velit Lorem do minim velit ipsum eu ut eu labore. Deserunt aute deserunt ad pariatur ea adipisicing nisi eu duis irure incididunt laboris Lorem eu. Sit nulla ut pariatur ad duis Lorem proident sint elit sit consequat exercitation. Ad sit fugiat adipisicing eu irure excepteur irure Lorem proident culpa irure. Et dolor laboris magna officia proident quis. Non nostrud laboris aliquip elit."
+    }],
+    "works":[{
+        "repo_url":"https://github.com/fealegre/Info2020Django",
+        "course":"Python Django SQLServer MySql",        
+        "project_name":"INFORMATORIO 2020 - PROYECTO FINAL",
+        "project_comment":"APP WEB 'WORKHUB', BÚSQUEDA DE SERVICIOS Y OFICIOS",
+        "project_details":"Proyecto para el Informatorio sobre una app web para ayudar a las personas a encontrar trabajadores de un rubro especÍfico, en su zona, a la hora que necesite. Permite el registro de usuarios de la aplicación, como así tambien de los oferentes de distintos servicios, y sus datos de contacto. Categoriza los servicios por Rubro y Especialidad. Reune información de zona de cobertura, detalles del servicio brindado, acreditaciónes o certificaciones de capacidad en el rubro que ofrece, búsqueda filtrada por rubros y por zonas, ranking valorativo y comentarios de los usuarios de los servicios.",
+        "course_style":"tm-portfolio-name text-white tm-bg-dark-gray",
+        "proj_name_style":"tm-text-dark-gray",
+        "proj_comment_style":"tm-title-small",
+        "proj_details_style":"mb-0"
+    },
+    {
+        "repo_url":"https://github.com/fealegre/RepoJavaInfo2021",
+        "course":"Lenguaje Java y POO",
+        "project_name":"INFORMATORIO 2021 - ESPECIALIZACIÓN EN TECNOLOGÍAS DE DESARROLLO",
+        "project_comment":"REPOSITORIO DE EJERCICIOS Y TAREAS PROPUESTAS",
+        "project_details":"En este repositorio se encuentran resueltas las tareas de ejercicios y escenarios propuestos, en la primera parte de esta etapa 3. Introductorio al lenguaje JAVA y PROGRAMACIÓN ORIENTADA A OBJETOS.",
+        "course_style":"tm-portfolio-name text-white tm-bg-orange",
+        "proj_name_style":"tm-text-orange",
+        "proj_comment_style":"tm-title-small",
+        "proj_details_style":"mb-0"
+    },
+    {
+        "repo_url":"https://github.com/fealegre/portfolio",
+        "course":"Portfolio HTML JavaScript CSS",
+        "project_name":"ARMAR UN PORTFOLIO PERSONAL",
+        "project_comment":"WEB PAGE",
+        "project_details":"Presentación (quien soy , que hago, etc). Que proyectos hice (Ejemplo: la app de la Etapa 2 en Django, otros que realicé practicando etc). Descripción y una foto de la app (la página home u otra). Contacto: Link de Github, link de redes sociales , etc. Se debe subir a Github el HTML y CSS y compartir el repo o el link del portfolio (ver Github Pages, u otros servidores de web estáticas) La actividad es creativa, depende del conocimiento de cada uno. Puede ser de lo mas básico hasta lo mas avanzado.",
+        "course_style":"tm-portfolio-name text-white tm-bg-green",
+        "proj_name_style":"tm-text-green",
+        "proj_comment_style":"tm-title-small",
+        "proj_details_style":"mb-0"
+    },
+    {
+        "repo_url":"https://github.com/fealegre/Info2021Spring",
+        "course":"Java Spring Framework Hibernate",
+        "project_name":"INFORMATORIO 2021 - PROYECTO FINAL",
+        "project_comment":"ECOMMERCE DE RUBRO A ELECCION",
+        "project_details":"Desarrollo de una API Rest para un ecommerce de rubro a elección, usando el framework Spring junto con la herramienta Spring Boot. Que sea testeada con los tipos mas usados de HTTP Requests, y que utilice la herramienta de mapeo ORM, Hibernate, para la persistencia de los datos generados por la aplicación.",
+        "course_style":"tm-portfolio-name text-white tm-bg-blue",
+        "proj_name_style":"tm-text-blue",
+        "proj_comment_style":"tm-title-small",
+        "proj_details_style":"mb-0"
+    }],
+    "exp":[{
+        "logo":"assets/img/450_1000.jpg",
+        "job":"Sit nulla labore quis esse nulla excepteur anim sit mollit.",
+        "position":"Qui tempor velit Lorem do minim velit ipsum eu ut eu labore. Deserunt aute deserunt ad pariatur ea adipisicing nisi eu duis irure incididunt laboris Lorem eu. Sit nulla ut pariatur ad duis Lorem proident sint elit sit consequat exercitation. Ad sit fugiat adipisicing eu irure excepteur irure Lorem proident culpa irure. Et dolor laboris magna officia proident quis. Non nostrud laboris aliquip elit."
+    },
+    {
+        "logo":"assets/img/450_1000.jpg",
+        "job":"Sit nulla labore quis esse nulla excepteur anim sit mollit.",
+        "position":"Qui tempor velit Lorem do minim velit ipsum eu ut eu labore. Deserunt aute deserunt ad pariatur ea adipisicing nisi eu duis irure incididunt laboris Lorem eu. Sit nulla ut pariatur ad duis Lorem proident sint elit sit consequat exercitation. Ad sit fugiat adipisicing eu irure excepteur irure Lorem proident culpa irure. Et dolor laboris magna officia proident quis. Non nostrud laboris aliquip elit."
+    },
+    {
+        "logo":"assets/img/450_1000.jpg",
+        "job":"Sit nulla labore quis esse nulla excepteur anim sit mollit.",
+        "position":"Qui tempor velit Lorem do minim velit ipsum eu ut eu labore. Deserunt aute deserunt ad pariatur ea adipisicing nisi eu duis irure incididunt laboris Lorem eu. Sit nulla ut pariatur ad duis Lorem proident sint elit sit consequat exercitation. Ad sit fugiat adipisicing eu irure excepteur irure Lorem proident culpa irure. Et dolor laboris magna officia proident quis. Non nostrud laboris aliquip elit."
+    },
+    {
+        "logo":"assets/img/450_1000.jpg",
+        "job":"Sit nulla labore quis esse nulla excepteur anim sit mollit.",
+        "position":"Qui tempor velit Lorem do minim velit ipsum eu ut eu labore. Deserunt aute deserunt ad pariatur ea adipisicing nisi eu duis irure incididunt laboris Lorem eu. Sit nulla ut pariatur ad duis Lorem proident sint elit sit consequat exercitation. Ad sit fugiat adipisicing eu irure excepteur irure Lorem proident culpa irure. Et dolor laboris magna officia proident quis. Non nostrud laboris aliquip elit."
+    }]
+
+}

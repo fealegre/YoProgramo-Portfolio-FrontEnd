@@ -1,0 +1,12 @@
+<div class="container-fluid">
+    <h1>EXPERIENCIA</h1>
+    <ul>
+        <li *ngFor="let exp of expList">
+            <div class="row">
+                <img [src]="exp.logo" width="100" height="100" alt="">
+                <h4>{{exp.job}}</h4>
+                <h6>{{exp.position}}</h6>
+            </div>
+        </li>
+    </ul>
+</div>
