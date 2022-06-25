@@ -9,15 +9,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { EducationComponent } from './componentes/education/education.component';
 import { SkillsComponent } from './componentes/skills/skills.component';
 import { JobsComponent } from './componentes/jobs/jobs.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { FooterComponent } from './componentes/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AboutComponent, WorksComponent, ContactComponent, EducationComponent, SkillsComponent, JobsComponent
+    AboutComponent, WorksComponent, ContactComponent, EducationComponent, SkillsComponent, JobsComponent, FooterComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    NgCircleProgressModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
