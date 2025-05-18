@@ -6,9 +6,10 @@ import { ToastrService } from 'ngx-toastr';
 import { FirebaseCodeErrorService } from 'src/app/servicios/firebase-code-error.service';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+    selector: 'app-login',
+    templateUrl: './login.component.html',
+    styleUrls: ['./login.component.css'],
+    standalone: false
 })
 export class LoginComponent implements OnInit {
 

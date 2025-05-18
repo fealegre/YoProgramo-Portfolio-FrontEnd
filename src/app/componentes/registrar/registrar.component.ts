@@ -6,9 +6,10 @@ import { Router } from '@angular/router';
 import { FirebaseCodeErrorService } from 'src/app/servicios/firebase-code-error.service';
 
 @Component({
-  selector: 'app-registrar',
-  templateUrl: './registrar.component.html',
-  styleUrls: ['./registrar.component.css'],
+    selector: 'app-registrar',
+    templateUrl: './registrar.component.html',
+    styleUrls: ['./registrar.component.css'],
+    standalone: false
 })
 export class RegistrarComponent implements OnInit {
   //BINDEA CON FORMULARIO EN registrar.component.html

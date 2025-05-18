@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { PortfolioService } from 'src/app/servicios/portfolio.service';
 
 @Component({
-  selector: 'app-works',
-  templateUrl: './works.component.html',
-  styleUrls: ['./works.component.css']
+    selector: 'app-works',
+    templateUrl: './works.component.html',
+    styleUrls: ['./works.component.css'],
+    standalone: false
 })
 export class WorksComponent implements OnInit {
   worksList:any;

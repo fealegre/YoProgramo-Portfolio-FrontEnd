@@ -8,6 +8,7 @@ import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'
 import { AngularFireModule } from '@angular/fire/compat';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { environment } from 'src/environments/environment';
 
 // COMPONENTS
 import { AppComponent } from './app.component';
@@ -22,11 +23,11 @@ import { HomeComponent } from './componentes/home/home.component';
 import { LoginComponent } from './componentes/login/login.component';
 import { RegistrarComponent } from './componentes/registrar/registrar.component';
 import { RecuperarComponent } from './componentes/recuperar/recuperar.component';
-import { environment } from 'src/environments/environment';
 import { VerificarCorreoComponent } from './componentes/verificar-correo/verificar-correo.component';
 import { HeaderBarComponent } from './componentes/header-bar/header-bar.component';
 
-@NgModule({ declarations: [
+@NgModule({
+    declarations: [
         AppComponent,
         AboutComponent,
         WorksComponent,
@@ -42,11 +43,14 @@ import { HeaderBarComponent } from './componentes/header-bar/header-bar.componen
         VerificarCorreoComponent,
         HeaderBarComponent,
     ],
-    bootstrap: [AppComponent], imports: [BrowserModule,
+    bootstrap: [AppComponent],
+    imports: [BrowserModule,
+        BrowserAnimationsModule, // required animations module
         NgCircleProgressModule.forRoot(),
         AppRoutingModule,
         ReactiveFormsModule,
         AngularFireModule.initializeApp(environment.firebaseConfig),
-        BrowserAnimationsModule, // required animations module
-        ToastrModule.forRoot()], providers: [provideHttpClient(withInterceptorsFromDi())] })
-export class AppModule {}
+        ToastrModule.forRoot()],
+    providers: [provideHttpClient(withInterceptorsFromDi())]
+})
+export class AppModule { }
