@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
@@ -12,10 +12,10 @@ import { FirebaseCodeErrorService } from 'src/app/servicios/firebase-code-error.
 })
 export class RegistrarComponent implements OnInit {
   //BINDEA CON FORMULARIO EN registrar.component.html
-  registrarUsuario: FormGroup;
+  registrarUsuario: UntypedFormGroup;
 
   constructor(
-    private fb: FormBuilder,
+    private fb: UntypedFormBuilder,
     private afAuth: AngularFireAuth,
     private toastr: ToastrService,
     private router: Router,
