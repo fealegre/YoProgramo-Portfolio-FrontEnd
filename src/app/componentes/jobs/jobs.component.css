@@ -1,3 +1,10 @@
+/* Estilos para la sección de Experiencias */
+.experience-section {
+  padding: 60px 0; /* Asegura que haya padding superior e inferior */
+  /* Puedes ajustar 60px si necesitas más espacio */
+  /* background-color: #ffffff; /* Color de fondo si alternas */
+}
+
 /* Estilos básicos para la lista */
 .experience-list {
     list-style-type: none;
@@ -59,4 +66,13 @@
       align-items: center; /* Asegura que el contenido esté centrado verticalmente */
     }
   }
+
+/* Media Query para ajustar el padding en móviles si es necesario */
+@media (max-width: 767.98px) { /* Punto de interrupción de Bootstrap para sm */
+  .experience-section {
+    padding-top: 250px; /* Añade más padding superior en móviles si 60px no es suficiente */
+    /* padding-bottom: 40px; */ /* Opcional: ajusta también el padding inferior en móviles */
+  }
+}
+
   

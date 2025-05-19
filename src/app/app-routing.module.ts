@@ -16,7 +16,13 @@ export const ROUTES: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(ROUTES)],
+  imports: [
+    RouterModule.forRoot(ROUTES, {
+      anchorScrolling: 'enabled', // Habilita el scroll a fragmentos
+      scrollPositionRestoration: 'enabled', // Restaura la posición de scroll al navegar hacia atrás/adelante
+      scrollOffset: [0, 60]
+    })
+  ],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -25,7 +25,7 @@ body {
   .skills-section,
   .projects-section,
   .contact-section {
-    padding: 60px 0; /* Padding vertical para todas las secciones */
+    padding: 56px 0; /* Padding vertical para todas las secciones */
   }
   
   /* Fondos de sección alternados */
