@@ -1,3 +1,62 @@
-li {
+/* Estilos básicos para la lista */
+.experience-list {
     list-style-type: none;
-}
+    padding: 0; /* Elimina el padding por defecto de la lista */
+    margin: 0; /* Elimina el margen por defecto de la lista */
+  }
+  
+  /* Estilos para cada entrada de experiencia (la "tarjeta") */
+  .experience-item {
+    background-color: #f8f9fa; /* Un fondo ligero */
+    border: 1px solid #dee2e6; /* Un borde sutil */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    margin-bottom: 20px; /* Espacio entre entradas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* Una sombra suave */
+  }
+  
+  /* Estilos para el logo */
+  .experience-logo {
+    max-width: 100px; /* Limita el tamaño máximo del logo */
+    height: auto; /* Mantiene la proporción */
+    margin-bottom: 15px; /* Espacio debajo del logo en móviles */
+  }
+  
+  /* Estilos para el título del trabajo y la posición */
+  .experience-job-title {
+    font-size: 1.3em;
+    margin-bottom: 5px;
+  }
+  
+  .experience-position {
+    font-size: 1.1em;
+    color: #555; /* Un color de texto ligeramente más claro */
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos para fechas y descripción (si los añades) */
+  /*
+  .experience-dates {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 10px;
+  }
+  
+  .experience-description {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  */
+  
+  /* Media Query para pantallas medianas y grandes */
+  @media (min-width: 768px) {
+    .experience-logo {
+      margin-bottom: 0; /* Elimina el margen inferior del logo en pantallas grandes */
+      margin-right: 20px; /* Espacio a la derecha del logo */
+    }
+  
+    .experience-item .row {
+      align-items: center; /* Asegura que el contenido esté centrado verticalmente */
+    }
+  }
+  

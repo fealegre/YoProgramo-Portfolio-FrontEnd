@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
 
@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
   dataUser: any;
   constructor(
+    @Inject(AngularFireAuth)
     private afAuth: AngularFireAuth,
     private router:Router
   ) { }

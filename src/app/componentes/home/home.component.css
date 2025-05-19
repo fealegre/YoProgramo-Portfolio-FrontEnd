@@ -1,0 +1,65 @@
+/* Estilos generales para el cuerpo de la página */
+body {
+    font-family: 'Arial', sans-serif; /* Consistencia de fuente para todo el sitio */
+    line-height: 1.6; /* Mejora la legibilidad global */
+    color: #333; /* Color de texto por defecto */
+    margin: 0; /* Elimina el margen por defecto del body */
+    padding-top: 56px; /* Añade padding en la parte superior para el navbar fijo (ajusta según la altura de tu navbar) */
+  }
+  
+  /* Estilos para los títulos de sección */
+  /* Si no quieres que todos los h2 tengan este estilo, añade una clase específica */
+  h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    color: #333;
+  }
+  
+  /* Espaciado entre secciones */
+  /* Puedes aplicar padding superior e inferior a cada sección */
+  /* Esto se haría en los archivos CSS de cada componente de sección */
+  .about-section,
+  .experience-section, /* Asegúrate de que tus secciones tengan estas clases */
+  .education-section,
+  .skills-section,
+  .projects-section,
+  .contact-section {
+    padding: 60px 0; /* Padding vertical para todas las secciones */
+  }
+  
+  /* Fondos de sección alternados */
+  /* Aplica un fondo diferente a secciones alternas para romper la monotonía */
+  .about-section,
+  .education-section,
+  .projects-section {
+    background-color: #f8f9fa; /* Un fondo claro */
+  }
+  
+  .experience-section,
+  .skills-section,
+  .contact-section {
+    background-color: #ffffff; /* Fondo blanco o ligeramente diferente */
+  }
+  
+  
+  /* Asegura que el contenido de las secciones no toque los bordes en pantallas grandes */
+  /* Si usas container de Bootstrap, esto ya está manejado */
+  /* Si no, podrías envolver el contenido de cada sección en un div con un ancho máximo y centrado */
+  /*
+  .section-content {
+    max-width: 1200px; // Ejemplo de ancho máximo
+    margin: 0 auto;    // Centra el contenido
+    padding: 0 15px;   // Padding horizontal
+  }
+  */
+  
+  /* Media Query para ajustar el padding top para el navbar en pantallas pequeñas */
+  @media (max-width: 991.98px) { /* Punto de interrupción de Bootstrap para lg */
+    body {
+      padding-top: 0; /* Elimina el padding superior en móviles si el navbar no es fijo o tiene otro comportamiento */
+    }
+  
+    /* Si el navbar colapsado tiene una altura diferente, puedes ajustar el padding aquí */
+  }
+  

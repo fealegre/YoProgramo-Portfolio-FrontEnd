@@ -1,3 +1,62 @@
-li {
+/* Estilos básicos para la lista */
+.education-list {
     list-style-type: none;
-}
+    padding: 0; /* Elimina el padding por defecto de la lista */
+    margin: 0; /* Elimina el margen por defecto de la lista */
+  }
+  
+  /* Estilos para cada entrada de educación (la "tarjeta") */
+  .education-item {
+    background-color: #f8f9fa; /* Un fondo ligero (puedes usar un color diferente si prefieres) */
+    border: 1px solid #dee2e6; /* Un borde sutil */
+    border-radius: 8px; /* Bordes redondeados */
+    padding: 20px; /* Espaciado interno */
+    margin-bottom: 20px; /* Espacio entre entradas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* Una sombra suave */
+  }
+  
+  /* Estilos para el logo */
+  .education-logo {
+    max-width: 100px; /* Limita el tamaño máximo del logo */
+    height: auto; /* Mantiene la proporción */
+    margin-bottom: 15px; /* Espacio debajo del logo en móviles */
+  }
+  
+  /* Estilos para la escuela y el título */
+  .education-school {
+    font-size: 1.3em;
+    margin-bottom: 5px;
+  }
+  
+  .education-degree {
+    font-size: 1.1em;
+    color: #555; /* Un color de texto ligeramente más claro */
+    margin-bottom: 10px;
+  }
+  
+  /* Estilos para fechas y descripción (si los añades) */
+  /*
+  .education-dates {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 10px;
+  }
+  
+  .education-description {
+    font-size: 1em;
+    line-height: 1.5;
+  }
+  */
+  
+  /* Media Query para pantallas medianas y grandes */
+  @media (min-width: 768px) {
+    .education-logo {
+      margin-bottom: 0; /* Elimina el margen inferior del logo en pantallas grandes */
+      margin-right: 20px; /* Espacio a la derecha del logo */
+    }
+  
+    .education-item .row {
+      align-items: center; /* Asegura que el contenido esté centrado verticalmente */
+    }
+  }
+  

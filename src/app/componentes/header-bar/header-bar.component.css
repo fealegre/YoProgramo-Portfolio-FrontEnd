@@ -1,17 +1,63 @@
-/* .menu {
-    background-color: #20348c;
-    display: flex;
-    justify-content: flex-end;
-    align-items:flex-end;
+/* Estilos para la sección About */
+.about-section {
+  background-color: #f8f9fa; /* Un fondo ligero para diferenciar la sección */
+  padding: 60px 0; /* Espaciado vertical */
+  font-family: 'Arial', sans-serif; /* Consistencia de fuente */
+}
+
+/* Estilos para el título de la sección */
+.about-section h2 {
+  text-align: center; /* Centra el título */
+  margin-bottom: 40px; /* Espacio debajo del título */
+  font-size: 2.5em;
+  color: #333;
+}
+
+/* Estilos para la imagen */
+.about-image img {
+  max-width: 250px; /* Limita el tamaño máximo de la imagen */
+  margin: 0 auto; /* Centra la imagen horizontalmente en móviles */
+  display: block; /* Asegura que margin auto funcione */
+}
+
+/* Estilos para el contenedor del texto */
+.about-text {
+  line-height: 1.6; /* Mejora la legibilidad del texto */
+}
+
+/* Estilos para el párrafo lead */
+.about-text .lead {
+  font-size: 1.25em;
+  margin-bottom: 20px;
+}
+
+/* Estilos para el párrafo adicional */
+.about-additional-text {
+  margin-top: 20px; /* Espacio arriba del párrafo adicional */
+  line-height: 1.6;
+}
+
+
+/* Media Query para pantallas medianas y grandes */
+@media (min-width: 768px) {
+  .about-section h2 {
+    text-align: left; /* Alinea el título a la izquierda en pantallas grandes */
   }
-  
-.row .menu ul li {
-    display: inline-block;
-    list-style-type: none;
-    text-align: left;
+
+  .about-image img {
+    margin: 0; /* Elimina el margen auto en pantallas grandes */
   }
-  
-.row .menu ul li a {
-    padding: 10px;
+
+  .about-text {
+    padding-right: 15px; /* Espacio a la derecha del texto */
   }
-   */
+
+  .about-image {
+    padding-left: 15px; /* Espacio a la izquierda de la imagen */
+  }
+
+  .about-additional-text {
+    margin-top: 40px; /* Más espacio arriba del párrafo adicional en pantallas grandes */
+  }
+}
+

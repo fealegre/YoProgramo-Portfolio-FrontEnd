@@ -6,6 +6,7 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
 import { ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { environment } from 'src/environments/environment';
@@ -26,6 +27,9 @@ import { RecuperarComponent } from './componentes/recuperar/recuperar.component'
 import { VerificarCorreoComponent } from './componentes/verificar-correo/verificar-correo.component';
 import { HeaderBarComponent } from './componentes/header-bar/header-bar.component';
 
+// Define firebaseConfig as a constant
+const firebaseConfig = environment.firebaseConfig;
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -44,13 +48,22 @@ import { HeaderBarComponent } from './componentes/header-bar/header-bar.componen
         HeaderBarComponent,
     ],
     bootstrap: [AppComponent],
-    imports: [BrowserModule,
-        BrowserAnimationsModule, // required animations module
-        NgCircleProgressModule.forRoot(),
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        NgCircleProgressModule.forRoot({            
+            radius: 75,
+            maxPercent: 100,            
+            subtitleColor: "#444444",
+            showInnerStroke: true,            
+            animationDuration: 600,
+        }),
         AppRoutingModule,
         ReactiveFormsModule,
-        AngularFireModule.initializeApp(environment.firebaseConfig),
+        AngularFireModule.initializeApp(firebaseConfig),
+        AngularFireAuthModule,
         ToastrModule.forRoot()],
-    providers: [provideHttpClient(withInterceptorsFromDi())]
+    providers: [
+        provideHttpClient(withInterceptorsFromDi()),]
 })
 export class AppModule { }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Inject, OnInit } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { ToastrService } from 'ngx-toastr';
@@ -17,7 +17,9 @@ export class RegistrarComponent implements OnInit {
 
   constructor(
     private fb: UntypedFormBuilder,
+    @Inject(AngularFireAuth)
     private afAuth: AngularFireAuth,
+    @Inject(ToastrService)
     private toastr: ToastrService,
     private router: Router,
     private firebaseError: FirebaseCodeErrorService

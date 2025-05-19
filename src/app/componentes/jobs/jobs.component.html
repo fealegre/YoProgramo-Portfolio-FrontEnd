@@ -1,17 +1,18 @@
-<div class="container-fluid px-4">
-    <h1>EXPERIENCIA</h1>
-    <ul>
-        <li *ngFor="let exp of expList">
-            <div class="row align-items-center gx-5">
-                <div class="col-auto">
-                    <img [src]="exp.logo" width="100" height="100" alt="">
+<div class="container-fluid px-4 experience-section">
+    <h2>EXPERIENCIA</h2> <!-- Cambiado a h2 por jerarquía -->
+    <ul class="experience-list">
+        <li *ngFor="let exp of expList" class="experience-item">
+            <div class="row align-items-center gx-3"> <!-- gx-3 para menos espacio horizontal si prefieres -->
+                <div class="col-md-2 col-sm-3 col-4 text-center"> <!-- Clases para controlar el ancho en diferentes pantallas -->
+                    <img [src]="exp.logo" class="experience-logo img-fluid" alt=""> <!-- Añadida clase y img-fluid -->
                 </div>
-                <div class="col-auto">
-                    <h5>{{exp.job}}</h5>
+                <div class="col-md-10 col-sm-9 col-8">
+                    <h5 class="experience-job-title">{{exp.job}}</h5> <!-- Añadida clase -->
+                    <h6 class="experience-position">{{exp.position}}</h6> <!-- Añadida clase -->
+                    <!-- Puedes añadir más información aquí, como fechas o una breve descripción -->
+                    <!-- <p class="experience-dates">{{exp.startDate}} - {{exp.endDate}}</p> -->
+                    <!-- <p class="experience-description">{{exp.description}}</p> -->
                 </div>
-                <div class="col-auto">                    
-                    <h6>{{exp.position}}</h6>
-                </div>                
             </div>
         </li>
     </ul>
