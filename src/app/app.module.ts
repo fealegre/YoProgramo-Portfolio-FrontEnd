@@ -52,7 +52,7 @@ const firebaseConfig = environment.firebaseConfig;
         BrowserModule,
         BrowserAnimationsModule,
         NgCircleProgressModule.forRoot({            
-            radius: 75,
+            radius: 40,
             maxPercent: 100,            
             subtitleColor: "#444444",
             showInnerStroke: true,            
