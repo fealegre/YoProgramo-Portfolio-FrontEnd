@@ -11,20 +11,24 @@ import { ToastrModule } from 'ngx-toastr';
 
 // COMPONENTS
 import { AppComponent } from './app.component';
-import { AboutComponent } from './componentes/about/about.component';
-import { WorksComponent } from './componentes/works/works.component';
-import { ContactComponent } from './componentes/contact/contact.component';
-import { EducationComponent } from './componentes/education/education.component';
-import { SkillsComponent } from './componentes/skills/skills.component';
-import { JobsComponent } from './componentes/jobs/jobs.component';
-import { FooterComponent } from './componentes/footer/footer.component';
-import { HomeComponent } from './componentes/home/home.component';
-import { LoginComponent } from './componentes/login/login.component';
-import { RegistrarComponent } from './componentes/registrar/registrar.component';
-import { RecuperarComponent } from './componentes/recuperar/recuperar.component';
+import { AboutComponent } from './component/about/about.component';
+import { WorksComponent } from './component/works/works.component';
+import { ContactComponent } from './component/contact/contact.component';
+import { EducationComponent } from './component/education/education.component';
+import { SkillsComponent } from './component/skills/skills.component';
+import { JobsComponent } from './component/jobs/jobs.component';
+import { FooterComponent } from './component/footer/footer.component';
+import { HomeComponent } from './component/home/home.component';
+import { LoginComponent } from './component/login/login.component';
+import { RegistrarComponent } from './component/registrar/registrar.component';
+import { RecuperarComponent } from './component/recuperar/recuperar.component';
 import { environment } from 'src/environments/environment';
-import { VerificarCorreoComponent } from './componentes/verificar-correo/verificar-correo.component';
-import { HeaderBarComponent } from './componentes/header-bar/header-bar.component';
+import { VerificarCorreoComponent } from './component/verificar-correo/verificar-correo.component';
+import { HeaderBarComponent } from './component/header-bar/header-bar.component';
+
+// SERVICES
+import { AuthService } from './service/auth.service';
+import { DataService } from './service/data.service';
 
 @NgModule({
   declarations: [
@@ -53,7 +57,10 @@ import { HeaderBarComponent } from './componentes/header-bar/header-bar.componen
     BrowserAnimationsModule, // required animations module
     ToastrModule.forRoot(), // ToastrModule added
   ],
-  providers: [],
+  providers: [
+    AuthService,
+    DataService
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -150,7 +150,7 @@ a:hover {
   display:flex;
   align-items: center;
   text-align: center;      
-  transition-property: background-color border-radius;
+  transition-property: background-color, border-radius;
   transition-duration: 1s;  
   
 }

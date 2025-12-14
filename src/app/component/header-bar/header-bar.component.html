@@ -1,0 +1,12 @@
+<div class="container-fluid">
+  <div class="text-end">
+    <button type="button" class="btn btn-warning" *ngIf="isLoggedIn(); else loginTemplate" (click)="logout()">
+      Logout
+    </button>
+
+    <!-- Si el usuario no está logueado, muestra el botón de login -->
+    <ng-template #loginTemplate>
+      <button type="button" class="btn btn-warning" (click)="login()">Login</button>
+    </ng-template>
+  </div>
+</div>
