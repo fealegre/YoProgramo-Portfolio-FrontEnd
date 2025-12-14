@@ -1,21 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { FirebaseCodeErrorService } from 'src/app/service/firebase-code-error.service';
 
 @Component({
-  selector: 'app-recuperar',
-  templateUrl: './recuperar.component.html',
-  styleUrls: ['./recuperar.component.css'],
+    selector: 'app-recuperar',
+    templateUrl: './recuperar.component.html',
+    styleUrls: ['./recuperar.component.css'],
+    standalone: false
 })
 export class RecuperarComponent implements OnInit {
-  recuperarUsuario: FormGroup;
+  recuperarUsuario: UntypedFormGroup;
 
   constructor(
-    private fb: FormBuilder,
+    private fb: UntypedFormBuilder,
+    @Inject(AngularFireAuth)
     private afAuth: AngularFireAuth,
+    @Inject(ToastrService)
     private toastr: ToastrService,
     private router: Router,
     private firebaseError: FirebaseCodeErrorService

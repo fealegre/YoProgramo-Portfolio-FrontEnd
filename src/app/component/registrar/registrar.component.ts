@@ -1,23 +1,26 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, Inject, OnInit } from '@angular/core';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router';
 import { FirebaseCodeErrorService } from 'src/app/service/firebase-code-error.service';
 
 @Component({
-  selector: 'app-registrar',
-  templateUrl: './registrar.component.html',
-  styleUrls: ['./registrar.component.css'],
+    selector: 'app-registrar',
+    templateUrl: './registrar.component.html',
+    styleUrls: ['./registrar.component.css'],
+    standalone: false
 })
 export class RegistrarComponent implements OnInit {
 
   //BINDEA CON FORMULARIO EN registrar.component.html
-  registrarUsuario: FormGroup;
+  registrarUsuario: UntypedFormGroup;
 
   constructor(
-    private fb: FormBuilder,
+    private fb: UntypedFormBuilder,
+    @Inject(AngularFireAuth)
     private afAuth: AngularFireAuth,
+    @Inject(ToastrService)
     private toastr: ToastrService,
     private router: Router,
     private firebaseError: FirebaseCodeErrorService
