@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { Router } from '@angular/router';
 
@@ -11,18 +11,11 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
   dataUser: any;
   constructor(
-<<<<<<< HEAD:src/app/component/home/home.component.ts
     private readonly afAuth: AngularFireAuth,
-    private readonly router:Router
-=======
-    @Inject(AngularFireAuth)
-    private afAuth: AngularFireAuth,
-    private router:Router
->>>>>>> 91d4cd61de20f43e282110d14c1662fffe178b9e:src/app/componentes/home/home.component.ts
+    private readonly router: Router
   ) { }
 
   ngOnInit(): void {
-    
     this.afAuth.currentUser.then((user) =>{
       if (user){        
         this.dataUser = user;
@@ -32,5 +25,4 @@ export class HomeComponent implements OnInit {
       }
     })
   }
-
 }

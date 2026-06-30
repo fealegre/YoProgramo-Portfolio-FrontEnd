@@ -35,7 +35,7 @@
     "@types/babel__core": "^7.1.19",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
-    "angular-playground": "^10.1.0",
+    "angular-playground": "^11.0.0",
     "jasmine-core": "~3.10.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",

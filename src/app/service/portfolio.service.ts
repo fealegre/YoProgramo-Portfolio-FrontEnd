@@ -12,4 +12,8 @@ export class PortfolioService {
   getPortfolio(): Observable<any> {
     return this.dataService.getPortfolio();
   }
+
+  obtenerDatos(): Observable<any> {
+    return this.dataService.getPortfolio();
+  }
 }
