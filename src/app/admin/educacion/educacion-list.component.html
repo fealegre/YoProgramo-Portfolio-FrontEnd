@@ -1,0 +1,28 @@
+<div class="container mt-4">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Educación</h2>
+    <div>
+      <a routerLink="/admin" class="btn btn-secondary btn-sm me-2">Volver</a>
+      <a routerLink="/admin/educacion/nueva" class="btn btn-primary btn-sm">Nueva</a>
+    </div>
+  </div>
+  <p *ngIf="loading">Cargando...</p>
+  <p *ngIf="!loading && educaciones.length === 0">No hay educaci\u00f3n cargada.</p>
+  <div class="table-responsive" *ngIf="!loading && educaciones.length > 0">
+    <table class="table table-striped">
+      <thead><tr><th>Logo</th><th>Institución</th><th>Título</th><th>Período</th><th>Acciones</th></tr></thead>
+      <tbody>
+        <tr *ngFor="let e of educaciones">
+          <td><img [src]="e.logoUrl" height="30" /></td>
+          <td>{{ e.institucion }}</td>
+          <td>{{ e.titulo }}</td>
+          <td>{{ e.fechaInicio }} - {{ e.fechaFin }}</td>
+          <td>
+            <a [routerLink]="['/admin/educacion/editar', e.id]" class="btn btn-sm btn-warning me-1">Editar</a>
+            <button class="btn btn-sm btn-danger" (click)="delete(e.id!)">Borrar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

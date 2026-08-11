@@ -1,31 +1,34 @@
-
 <section id="tmPortfolio">
   <div class="container-fluid">
     <h1>PROYECTOS</h1>
+    <p *ngIf="loading" class="text-muted">Cargando...</p>
+    <p *ngIf="error" class="text-danger">Error al cargar los datos.</p>
+    <p *ngIf="!loading && !error && worksList.length === 0" class="text-muted">No hay proyectos cargados.</p>
     <ul class="fa-ul">
-      <li *ngFor="let works of worksList">
+      <li *ngFor="let work of worksList">
         <div class="row">
           <div class="col-12">
             <div class="tm-portfolio-item">
-              <a style="text-decoration:none;" [href]="works.repo_url" target="_blank">
-                <div [class]="works.course_style">
-                  {{works.course}}
+              <a style="text-decoration:none;" [href]="work.urlGithub" target="_blank">
+                <div class="tm-portfolio-name">
+                  {{ work.nombre }}
                 </div>
               </a>
               <div class="tm-portfolio-description">
-                <h3 style="text-align: center;" [class]="works.proj_name_style">
-                  {{works.project_name}}<br />
-                  <span [class]="works.proj_comment_style">{{works.project_comment}}</span>
+                <h3 style="text-align: center;">
+                  {{ work.tecnologias }}
                 </h3>
-                <p [class]="works.proj_details_style" style="text-align: justify;">
-                  {{works.project_details}}
+                <p style="text-align: justify;">
+                  {{ work.descripcion }}
                 </p>
+                <div class="text-center" *ngIf="work.urlDemo">
+                  <a [href]="work.urlDemo" target="_blank" class="btn btn-sm btn-outline-primary">Ver Demo</a>
+                </div>
               </div>
-            </div>            
+            </div>
           </div>
         </div>
       </li>
     </ul>
   </div>
 </section>
-<!-- End portfolio section -->

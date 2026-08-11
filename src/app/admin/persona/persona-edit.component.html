@@ -1,0 +1,51 @@
+<div class="container mt-4">
+  <h2 class="mb-4">Editar Datos Personales</h2>
+  <p *ngIf="loading">Cargando...</p>
+  <form *ngIf="!loading" [formGroup]="personaForm" (ngSubmit)="save()">
+    <div class="row g-3">
+      <div class="col-md-6">
+        <label class="form-label">Nombre</label>
+        <input type="text" formControlName="nombre" class="form-control" />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Apellido</label>
+        <input type="text" formControlName="apellido" class="form-control" />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Título / Posición</label>
+        <input type="text" formControlName="titulo" class="form-control" />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Ubicación</label>
+        <input type="text" formControlName="ubicacion" class="form-control" />
+      </div>
+      <div class="col-12">
+        <label class="form-label">Bio</label>
+        <textarea formControlName="bio" class="form-control" rows="4"></textarea>
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">URL Imagen de Perfil</label>
+        <input type="text" formControlName="img" class="form-control" />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Email</label>
+        <input type="email" formControlName="email" class="form-control" />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">LinkedIn URL</label>
+        <input type="text" formControlName="linkedinUrl" class="form-control" />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">GitHub URL</label>
+        <input type="text" formControlName="githubUrl" class="form-control" />
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary" [disabled]="personaForm.invalid || saving">
+          <span *ngIf="saving" class="spinner-border spinner-border-sm me-2"></span>
+          Guardar
+        </button>
+        <a routerLink="/admin" class="btn btn-secondary ms-2">Cancelar</a>
+      </div>
+    </div>
+  </form>
+</div>

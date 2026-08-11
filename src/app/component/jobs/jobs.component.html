@@ -1,19 +1,21 @@
-<div class="container-fluid px-4 experience-section">
-    <h2>EXPERIENCIA</h2> <!-- Cambiado a h2 por jerarquía -->
+<section id="experience" class="experience-section">
+<div class="container-fluid px-4">
+    <h2>EXPERIENCIA</h2>
+    <p *ngIf="loading" class="text-muted">Cargando...</p>
+    <p *ngIf="error" class="text-danger">Error al cargar los datos.</p>
+    <p *ngIf="!loading && !error && expList.length === 0" class="text-muted">No hay experiencia cargada.</p>
     <ul class="experience-list">
         <li *ngFor="let exp of expList" class="experience-item">
-            <div class="row align-items-center gx-3"> <!-- gx-3 para menos espacio horizontal si prefieres -->
-                <div class="col-md-2 col-sm-3 col-4 text-center"> <!-- Clases para controlar el ancho en diferentes pantallas -->
-                    <img [src]="exp.logo" class="experience-logo img-fluid" alt=""> <!-- Añadida clase y img-fluid -->
+            <div class="row align-items-center gx-3">
+                <div class="col-md-2 col-sm-3 col-4 text-center">
+                    <img [src]="exp.logoE" class="experience-logo img-fluid" alt="">
                 </div>
                 <div class="col-md-10 col-sm-9 col-8">
-                    <h5 class="experience-job-title">{{exp.job}}</h5> <!-- Añadida clase -->
-                    <h6 class="experience-position">{{exp.position}}</h6> <!-- Añadida clase -->
-                    <!-- Puedes añadir más información aquí, como fechas o una breve descripción -->
-                    <!-- <p class="experience-dates">{{exp.startDate}} - {{exp.endDate}}</p> -->
-                    <!-- <p class="experience-description">{{exp.description}}</p> -->
+                    <h5 class="experience-job-title">{{ exp.nombreE }}</h5>
+                    <h6 class="experience-position">{{ exp.descripcionE }}</h6>
                 </div>
             </div>
         </li>
     </ul>
 </div>
+</section>

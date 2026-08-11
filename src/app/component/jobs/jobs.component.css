@@ -1,78 +1,31 @@
-/* Estilos para la sección de Experiencias */
 .experience-section {
-  padding: 60px 0; /* Asegura que haya padding superior e inferior */
-  /* Puedes ajustar 60px si necesitas más espacio */
-  /* background-color: #ffffff; /* Color de fondo si alternas */
+  padding: 60px 0;
 }
-
-/* Estilos básicos para la lista */
 .experience-list {
     list-style-type: none;
-    padding: 0; /* Elimina el padding por defecto de la lista */
-    margin: 0; /* Elimina el margen por defecto de la lista */
-  }
-  
-  /* Estilos para cada entrada de experiencia (la "tarjeta") */
-  .experience-item {
-    background-color: #f8f9fa; /* Un fondo ligero */
-    border: 1px solid #dee2e6; /* Un borde sutil */
-    border-radius: 8px; /* Bordes redondeados */
-    padding: 20px; /* Espaciado interno */
-    margin-bottom: 20px; /* Espacio entre entradas */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* Una sombra suave */
-  }
-  
-  /* Estilos para el logo */
-  .experience-logo {
-    max-width: 100px; /* Limita el tamaño máximo del logo */
-    height: auto; /* Mantiene la proporción */
-    margin-bottom: 15px; /* Espacio debajo del logo en móviles */
-  }
-  
-  /* Estilos para el título del trabajo y la posición */
-  .experience-job-title {
-    font-size: 1.3em;
-    margin-bottom: 5px;
-  }
-  
-  .experience-position {
-    font-size: 1.1em;
-    color: #555; /* Un color de texto ligeramente más claro */
-    margin-bottom: 10px;
-  }
-  
-  /* Estilos para fechas y descripción (si los añades) */
-  /*
-  .experience-dates {
-    font-size: 0.9em;
-    color: #777;
-    margin-bottom: 10px;
-  }
-  
-  .experience-description {
-    font-size: 1em;
-    line-height: 1.5;
-  }
-  */
-  
-  /* Media Query para pantallas medianas y grandes */
-  @media (min-width: 768px) {
-    .experience-logo {
-      margin-bottom: 0; /* Elimina el margen inferior del logo en pantallas grandes */
-      margin-right: 20px; /* Espacio a la derecha del logo */
-    }
-  
-    .experience-item .row {
-      align-items: center; /* Asegura que el contenido esté centrado verticalmente */
-    }
-  }
-
-/* Media Query para ajustar el padding en móviles si es necesario */
-@media (max-width: 767.98px) { /* Punto de interrupción de Bootstrap para sm */
-  .experience-section {
-    padding-top: 250px; /* Añade más padding superior en móviles si 60px no es suficiente */
-    /* padding-bottom: 40px; */ /* Opcional: ajusta también el padding inferior en móviles */
-  }
+    padding: 0;
+    margin: 0;
 }
+.experience-item {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+}
+.experience-logo {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+}
+.experience-job-title { font-size: 1.3em; margin-bottom: 5px; }
+.experience-position { font-size: 1.1em; color: #555; margin-bottom: 10px; }
 
-  
+@media (min-width: 768px) {
+    .experience-logo { margin-bottom: 0; margin-right: 20px; }
+    .experience-item .row { align-items: center; }
+}
+@media (max-width: 767.98px) {
+    .experience-section { padding-top: 60px; }
+}

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/service/portfolio.service';
+import { PersonaService } from 'src/app/core/services/persona.service';
+import { Persona } from 'src/app/core/models/persona.model';
 
 @Component({
   selector: 'app-about',
@@ -8,17 +9,22 @@ import { PortfolioService } from 'src/app/service/portfolio.service';
   standalone: false
 })
 export class AboutComponent implements OnInit {
-  name: any;
-  position: any;
-  welcome_msg: any;
+  persona: Persona | null = null;
+  loading = true;
+  error = false;
 
-  constructor(private readonly datosPortfolio: PortfolioService) {}
+  constructor(private readonly personaService: PersonaService) {}
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data => {
-      this.name = data.name;
-      this.position = data.position;
-      this.welcome_msg = data.welcome_msg;
+    this.personaService.getPerfil().subscribe({
+      next: (data) => {
+        this.persona = data;
+        this.loading = false;
+      },
+      error: () => {
+        this.error = true;
+        this.loading = false;
+      }
     });
   }
 }

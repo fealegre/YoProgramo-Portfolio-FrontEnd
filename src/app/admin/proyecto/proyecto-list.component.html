@@ -1,0 +1,27 @@
+<div class="container mt-4">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Proyectos</h2>
+    <div>
+      <a routerLink="/admin" class="btn btn-secondary btn-sm me-2">Volver</a>
+      <a routerLink="/admin/proyectos/nuevo" class="btn btn-primary btn-sm">Nuevo</a>
+    </div>
+  </div>
+  <p *ngIf="loading">Cargando...</p>
+  <p *ngIf="!loading && proyectos.length === 0">No hay proyectos cargados.</p>
+  <div class="table-responsive" *ngIf="!loading && proyectos.length > 0">
+    <table class="table table-striped">
+      <thead><tr><th>Nombre</th><th>Tecnologías</th><th>GitHub</th><th>Acciones</th></tr></thead>
+      <tbody>
+        <tr *ngFor="let p of proyectos">
+          <td>{{ p.nombre }}</td>
+          <td>{{ p.tecnologias }}</td>
+          <td><a [href]="p.urlGithub" target="_blank">Ver repo</a></td>
+          <td>
+            <a [routerLink]="['/admin/proyectos/editar', p.id]" class="btn btn-sm btn-warning me-1">Editar</a>
+            <button class="btn btn-sm btn-danger" (click)="delete(p.id!)">Borrar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

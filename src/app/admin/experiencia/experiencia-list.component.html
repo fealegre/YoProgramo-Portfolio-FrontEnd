@@ -1,0 +1,27 @@
+<div class="container mt-4">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Experiencia</h2>
+    <div>
+      <a routerLink="/admin" class="btn btn-secondary btn-sm me-2">Volver</a>
+      <a routerLink="/admin/experiencia/nueva" class="btn btn-primary btn-sm">Nueva</a>
+    </div>
+  </div>
+  <p *ngIf="loading">Cargando...</p>
+  <p *ngIf="!loading && experiencias.length === 0">No hay experiencia cargada.</p>
+  <div class="table-responsive" *ngIf="!loading && experiencias.length > 0">
+    <table class="table table-striped">
+      <thead><tr><th>Logo</th><th>Empresa</th><th>Puesto</th><th>Acciones</th></tr></thead>
+      <tbody>
+        <tr *ngFor="let e of experiencias">
+          <td><img [src]="e.logoE" height="30" /></td>
+          <td>{{ e.nombreE }}</td>
+          <td>{{ e.descripcionE }}</td>
+          <td>
+            <a [routerLink]="['/admin/experiencia/editar', e.id]" class="btn btn-sm btn-warning me-1">Editar</a>
+            <button class="btn btn-sm btn-danger" (click)="delete(e.id!)">Borrar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

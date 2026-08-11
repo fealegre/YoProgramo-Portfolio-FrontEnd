@@ -1,0 +1,52 @@
+<div class="container mt-4">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2>Panel de Administración</h2>
+    <div>
+      <a routerLink="/home" class="btn btn-outline-secondary btn-sm me-2">Ver Portfolio</a>
+      <button class="btn btn-danger btn-sm" (click)="logout()">Cerrar Sesión</button>
+    </div>
+  </div>
+
+  <div class="row g-3">
+    <div class="col-md-4">
+      <div class="card text-white bg-primary cursor-pointer" routerLink="/admin/persona">
+        <div class="card-body">
+          <h5 class="card-title">Datos Personales</h5>
+          <p class="card-text fs-4">{{ counts.persona }} registro(s)</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card text-white bg-success cursor-pointer" routerLink="/admin/experiencia">
+        <div class="card-body">
+          <h5 class="card-title">Experiencia</h5>
+          <p class="card-text fs-4">{{ counts.experiencia }} registro(s)</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card text-white bg-info cursor-pointer" routerLink="/admin/educacion">
+        <div class="card-body">
+          <h5 class="card-title">Educaci\u00f3n</h5>
+          <p class="card-text fs-4">{{ counts.educacion }} registro(s)</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card text-white bg-warning cursor-pointer" routerLink="/admin/proyectos">
+        <div class="card-body">
+          <h5 class="card-title">Proyectos</h5>
+          <p class="card-text fs-4">{{ counts.proyectos }} registro(s)</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card text-white bg-secondary cursor-pointer" routerLink="/admin/habilidades">
+        <div class="card-body">
+          <h5 class="card-title">Habilidades</h5>
+          <p class="card-text fs-4">{{ counts.habilidades }} registro(s)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

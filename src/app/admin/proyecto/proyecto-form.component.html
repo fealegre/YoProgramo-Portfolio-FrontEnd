@@ -1,0 +1,43 @@
+<div class="container mt-4">
+  <h2 class="mb-4">{{ isEdit ? 'Editar' : 'Nuevo' }} Proyecto</h2>
+  <p *ngIf="loading">Cargando...</p>
+  <form *ngIf="!loading" [formGroup]="form" (ngSubmit)="save()">
+    <div class="mb-3">
+      <label class="form-label">Nombre *</label>
+      <input type="text" formControlName="nombre" class="form-control" />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Descripción</label>
+      <textarea formControlName="descripcion" class="form-control" rows="4"></textarea>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Tecnologías</label>
+      <input type="text" formControlName="tecnologias" class="form-control" placeholder="Ej: Angular, Spring Boot, MySQL" />
+    </div>
+    <div class="row g-3 mb-3">
+      <div class="col-md-6">
+        <label class="form-label">URL GitHub</label>
+        <input type="text" formControlName="urlGithub" class="form-control" />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">URL Demo</label>
+        <input type="text" formControlName="urlDemo" class="form-control" />
+      </div>
+    </div>
+    <div class="row g-3 mb-3">
+      <div class="col-md-6">
+        <label class="form-label">URL Imagen</label>
+        <input type="text" formControlName="imagenUrl" class="form-control" />
+      </div>
+      <div class="col-md-6">
+        <label class="form-label">Orden</label>
+        <input type="number" formControlName="orden" class="form-control" />
+      </div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="form.invalid || saving">
+      <span *ngIf="saving" class="spinner-border spinner-border-sm me-2"></span>
+      Guardar
+    </button>
+    <a routerLink="/admin/proyectos" class="btn btn-secondary ms-2">Cancelar</a>
+  </form>
+</div>

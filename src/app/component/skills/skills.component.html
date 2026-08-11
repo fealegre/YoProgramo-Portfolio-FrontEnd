@@ -1,27 +1,28 @@
+<section id="skills" class="skills-section">
 <div class="container-fluid">
   <h1>SKILLS</h1>
-  <div class="row">
-    <div class="text-center col-sm-4 col-md-4 col-lg-4">
-      <circle-progress
-        [imageSrc]="'../../../assets/img/html5-svgrepo-com.svg'"
-        [showImage]="true"
-        [percent]="85"
-        [imageHeight]="35"
-        [imageWidth]="35"        
-        [outerStrokeWidth]="8"
-        [innerStrokeWidth]="4"
-        [outerStrokeColor]="'#0057ff'"
-        [innerStrokeColor]="'#3398cc'"
-        [animation]="true">
-      </circle-progress>
+  <p *ngIf="loading" class="text-muted">Cargando...</p>
+  <p *ngIf="error" class="text-danger">Error al cargar los datos.</p>
+  <p *ngIf="!loading && !error && habilidades.length === 0" class="text-muted">No hay habilidades cargadas.</p>
+  <div *ngFor="let categoria of categorias">
+    <h3 class="mb-3">{{ categoria }}</h3>
+    <div class="row mb-4">
+      <div *ngFor="let habilidad of getHabilidadesPorCategoria(categoria)" class="text-center col-sm-4 col-md-3 col-lg-2 mb-3">
+        <circle-progress
+          [percent]="habilidad.porcentaje"
+          [radius]="40"
+          [outerStrokeWidth]="8"
+          [innerStrokeWidth]="4"
+          [outerStrokeColor]="getStrokeColor(habilidad.porcentaje)"
+          [innerStrokeColor]="'#e0e0e0'"
+          [animation]="true"
+          [animationDuration]="600"
+          [showSubtitle]="true"
+          [subtitle]="habilidad.porcentaje + '%'">
+        </circle-progress>
+        <p class="mt-2 mb-0 small">{{ habilidad.nombre }}</p>
+      </div>
     </div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4"></div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4"></div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4"></div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4"></div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4"></div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4"></div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4"></div>
-    <div class="text-center col-sm-4 col-md-4 col-lg-4"></div>
   </div>
 </div>
+</section>

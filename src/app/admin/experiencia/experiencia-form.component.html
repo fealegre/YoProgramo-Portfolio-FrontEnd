@@ -1,0 +1,25 @@
+<div class="container mt-4">
+  <h2 class="mb-4">{{ isEdit ? 'Editar' : 'Nueva' }} Experiencia</h2>
+  <p *ngIf="loading">Cargando...</p>
+  <form *ngIf="!loading" [formGroup]="form" (ngSubmit)="save()">
+    <div class="mb-3">
+      <label class="form-label">URL Logo</label>
+      <input type="text" formControlName="logoE" class="form-control" />
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Empresa / Organización *</label>
+      <input type="text" formControlName="nombreE" class="form-control" />
+      <small class="text-danger" *ngIf="form.get('nombreE')?.invalid && form.get('nombreE')?.touched">Requerido (máx. 100)</small>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">Puesto / Descripción *</label>
+      <input type="text" formControlName="descripcionE" class="form-control" />
+      <small class="text-danger" *ngIf="form.get('descripcionE')?.invalid && form.get('descripcionE')?.touched">Requerido (máx. 500)</small>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="form.invalid || saving">
+      <span *ngIf="saving" class="spinner-border spinner-border-sm me-2"></span>
+      Guardar
+    </button>
+    <a routerLink="/admin/experiencia" class="btn btn-secondary ms-2">Cancelar</a>
+  </form>
+</div>

@@ -1,19 +1,24 @@
-<div class="container-fluid education-section">
+<section id="education" class="education-section">
+<div class="container-fluid">
   <h2>EDUCACION</h2>
+  <p *ngIf="loading" class="text-muted">Cargando...</p>
+  <p *ngIf="error" class="text-danger">Error al cargar los datos.</p>
+  <p *ngIf="!loading && !error && eduList.length === 0" class="text-muted">No hay educaci&oacute;n cargada.</p>
   <ul class="education-list">
-    <li *ngFor="let education of eduList" class="education-item">
+    <li *ngFor="let edu of eduList" class="education-item">
       <div class="row align-items-center gx-3">
         <div class="col-md-2 col-sm-3 col-4 text-center">
-          <img [src]="education.logo" class="education-logo img-fluid" alt="" />
+          <img [src]="edu.logoUrl" class="education-logo img-fluid" alt="" />
         </div>
         <div class="col-md-10 col-sm-9 col-8">
-          <h5 class="education-school">{{ education.school }}</h5>
-          <h6 class="education-degree">{{ education.degree }}</h6>
-          <!-- Puedes añadir más información aquí, como fechas o una breve descripción del curso -->
-          <!-- <p class="education-dates">{{education.startDate}} - {{education.endDate}}</p> -->
-          <!-- <p class="education-description">{{education.description}}</p> -->
+          <h5 class="education-school">{{ edu.institucion }}</h5>
+          <h6 class="education-degree">{{ edu.titulo }}</h6>
+          <p *ngIf="edu.fechaInicio || edu.fechaFin" class="text-muted">
+            {{ edu.fechaInicio }} - {{ edu.fechaFin }}
+          </p>
         </div>
       </div>
     </li>
   </ul>
 </div>
+</section>

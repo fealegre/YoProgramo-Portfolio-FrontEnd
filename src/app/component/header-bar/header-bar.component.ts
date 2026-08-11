@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from 'src/app/core/services/auth.service';
 
 @Component({
     selector: 'app-header-bar',
@@ -8,29 +8,25 @@ import { Router } from '@angular/router';
     styleUrls: ['./header-bar.component.css'],
     standalone: false
 })
-export class HeaderBarComponent implements OnInit {
+export class HeaderBarComponent {
+
+  isLoggedIn$ = this.authService.isLoggedIn$;
 
   constructor(
-    private readonly afAuth: AngularFireAuth,
-    private readonly route: Router
+    private readonly authService: AuthService,
+    private readonly router: Router
   ) { }
 
-  ngOnInit(): void {
-    // TODO document why this method 'ngOnInit' is empty
-  
+  goToAdmin() {
+    if (this.authService.isLoggedIn()) {
+      this.router.navigate(['/admin']);
+    } else {
+      this.router.navigate(['/admin/login']);
+    }
   }
 
-  isLoggedIn(): boolean {
-    return !!this.afAuth.user;
+  logout() {
+    this.authService.logout();
+    this.router.navigate(['/home']);
   }
-
-  login() {
-    this.route.navigate(['/login']);
-  }
-
-  logout(){
-    this.afAuth.signOut();
-    this.route.navigate(['/home']);
-  }
-
 }

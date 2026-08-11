@@ -1,0 +1,61 @@
+.parallax-window {
+    min-height: 1100px;
+    background: transparent;
+}
+#tmContact {
+    min-height: 1197px;
+    padding-top: 95px;
+}
+.tm-contact-items-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 130px;
+}
+.tm-brand-name {
+    font-size: 3.8rem;
+}
+.tm-contact-item-icon {
+    margin-bottom: 45px;
+    width: 100%;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.tm-contact-item {
+    width: 33.3334%;
+    max-width: 345px;
+    min-height: 420px;
+    margin-right: 35px;
+    background-color: white;
+    padding: 54px 34px 44px;
+}
+.tm-contact-item:last-child { margin-right: 0; }
+#tmContactForm {
+    width: 100%;
+    max-width: 680px;
+    padding: 45px 45px 30px;
+    margin-bottom: 95px;
+}
+.form-group { max-width: 355px; }
+.form-control { background: transparent; border-color: #999999; padding: 15px 10px; font-size: 1.1rem; margin-bottom: 10px; }
+.tm-btn-submit { background-color: #999999; padding: 12px 30px; font-size: 1.2rem; }
+.tm-btn-submit:focus, .tm-btn-submit:hover { background-color: #676767; }
+.tm-copyright-text { margin-bottom: 30px; }
+.tm-link { color: #676767; }
+
+@media (max-width: 1054px) {
+    .tm-contact-item-icon { margin-bottom: 15px; }
+}
+@media (max-width: 991px) {
+    .tm-contact-items-container { flex-direction: column; }
+    .tm-contact-item { width: auto; max-width: 680px; min-height: 0; margin-left: auto; margin-right: auto; margin-bottom: 30px; }
+    .tm-contact-item:last-child { margin-right: auto; margin-bottom: 0; }
+    #tmContactForm { margin-left: auto; margin-right: auto; }
+}
+@media (max-width: 572px) {
+    .tm-brand-name { }
+}
+@media (max-width: 443px) {
+    .tm-brand-name { font-size: 3rem; }
+}

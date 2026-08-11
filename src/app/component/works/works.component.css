@@ -1,0 +1,46 @@
+.projects-section {
+  padding-top: 80px;
+  background-color: rgb(252, 254, 253);
+}
+#tmPortfolio {
+    padding-top: 80px;
+    background-color: rgb(252, 254, 253);
+}
+.tm-portfolio-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 80px;
+}
+.tm-portfolio-name {
+    width: 330px;
+    height: 220px;
+    border-radius: 15px 50px;
+    font-size: 2rem;
+    padding: 40px 80px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    transition-property: background-color, border-radius;
+    transition-duration: 1s;
+}
+.tm-portfolio-name:hover {
+    background-color: red;
+    border-radius: 60px 5px;
+}
+.tm-portfolio-description {
+    width: calc(100% - 330px);
+    padding: 20px 45px;
+}
+.tm-portfolio-description h3 { margin-bottom: 20px; }
+.tm-text-green { color: #98cb00; }
+.tm-text-orange { color: #cc6733; }
+.tm-text-blue { color: #3398cc; }
+.tm-text-dark-gray { color: #676767; }
+.tm-title-small { font-size: 1.3rem; }
+
+@media (max-width: 730px) {
+    .tm-portfolio-item { flex-direction: column; }
+    .tm-portfolio-name { justify-content: center; }
+    .tm-portfolio-name, .tm-portfolio-description { width: 100%; }
+    .tm-portfolio-description { padding: 20px 30px; }
+}

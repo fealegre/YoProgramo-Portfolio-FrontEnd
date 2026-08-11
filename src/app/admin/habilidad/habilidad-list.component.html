@@ -1,0 +1,28 @@
+<div class="container mt-4">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2>Habilidades</h2>
+    <div>
+      <a routerLink="/admin" class="btn btn-secondary btn-sm me-2">Volver</a>
+      <a routerLink="/admin/habilidades/nueva" class="btn btn-primary btn-sm">Nueva</a>
+    </div>
+  </div>
+  <p *ngIf="loading">Cargando...</p>
+  <p *ngIf="!loading && habilidades.length === 0">No hay habilidades cargadas.</p>
+  <div class="table-responsive" *ngIf="!loading && habilidades.length > 0">
+    <table class="table table-striped">
+      <thead><tr><th>Nombre</th><th>%</th><th>Categoría</th><th>Orden</th><th>Acciones</th></tr></thead>
+      <tbody>
+        <tr *ngFor="let h of habilidades">
+          <td>{{ h.nombre }}</td>
+          <td>{{ h.porcentaje }}%</td>
+          <td>{{ h.categoria || 'General' }}</td>
+          <td>{{ h.orden }}</td>
+          <td>
+            <a [routerLink]="['/admin/habilidades/editar', h.id]" class="btn btn-sm btn-warning me-1">Editar</a>
+            <button class="btn btn-sm btn-danger" (click)="delete(h.id!)">Borrar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { PortfolioService } from 'src/app/service/portfolio.service';
+import { ProyectoService } from 'src/app/core/services/proyecto.service';
+import { Proyecto } from 'src/app/core/models/proyecto.model';
 
 @Component({
     selector: 'app-works',
@@ -8,13 +9,22 @@ import { PortfolioService } from 'src/app/service/portfolio.service';
     standalone: false
 })
 export class WorksComponent implements OnInit {
-  worksList:any;
-  constructor(private readonly datosPortfolio:PortfolioService) { }
+  worksList: Proyecto[] = [];
+  loading = true;
+  error = false;
+
+  constructor(private readonly proyectoService: ProyectoService) { }
 
   ngOnInit(): void {
-    this.datosPortfolio.obtenerDatos().subscribe(data=>{
-      this.worksList=data.works;
-    })
+    this.proyectoService.listar().subscribe({
+      next: (data) => {
+        this.worksList = data;
+        this.loading = false;
+      },
+      error: () => {
+        this.error = true;
+        this.loading = false;
+      }
+    });
   }
-
 }
