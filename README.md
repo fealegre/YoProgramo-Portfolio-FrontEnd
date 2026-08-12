@@ -1,17 +1,17 @@
 # Portfolio
 
-This is a personal portfolio project built with Angular. It showcases my skills, experience, and projects.
+This is a personal portfolio project built with Angular. It showcases skills, experience, and projects.
 
 ## Features
 
 *   **Home:** A landing page.
-*   **About:** Information about me.
-*   **Jobs:** My work experience.
-*   **Skills:** My technical skills.
-*   **Education:** My educational background.
-*   **Works:** A gallery of my projects.
+*   **About:** Information about.
+*   **Jobs:** Work experience.
+*   **Skills:** Technical skills.
+*   **Education:** Educational background.
+*   **Works:** A gallery of projects.
 *   **Contact:** A form to get in touch.
-*   **Authentication:** Login and registration functionality.
+*   **Authentication:** Login to admin dasboard functionality.
 
 ## Technologies Used
 
